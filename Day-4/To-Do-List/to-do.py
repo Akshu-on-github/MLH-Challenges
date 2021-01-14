@@ -39,12 +39,8 @@ def remove_task():
 
     with open('tasks.json', 'w') as f:
         json.dump(data, f, indent=4)
-
-
-
-
-
-
+        
+        
 def show_tasks():
     with open('tasks.json', 'r') as f:
         data = json.load(f)
@@ -59,12 +55,8 @@ def show_tasks():
         print(f'    Task Title: {task_title}')
         print(f'    Task Description: {task_description}')
         print(f'    Task Date: {task_date}\n')
-
-
-
-
-
-
+        
+        
 def app():
     if not os.path.exists('tasks.json'):
         with open('tasks.json', 'w') as f:
